@@ -47,9 +47,6 @@ void shop() {
 	clear();
 	add_cash();
 
-	int licznik1{}, licznik2{}, licznik3{}, licznik4{}, licznik5{}, licznik6{}, licznik7{}, licznik8{}, licznik9{}, licznik10{};
-	int unit;
-
 	cout << "Sklep" << endl;
 	cout << endl;
 	for (int i = 0; i < units_len; i++) {
@@ -67,8 +64,8 @@ void shop() {
 		cout << units[i].eff << " YPS" << endl;
 	}
 	cout << endl;
-	cout << "Wpisz 'q' aby wróciæ do menu g³ównego." << endl;
-	cout << "Wybierz jednostkê: ";
+	cout << "Wpisz 'q' aby wrÃ³ciÃ¦ do menu gÂ³Ã³wnego." << endl;
+	cout << "Wybierz jednostkÃª: ";
 	
 	cin >> unit;
 
@@ -79,18 +76,7 @@ void shop() {
 	if (unit == 0 || unit > units_len) return;
 	if (cash < units[unit - 1].cost) return;
 	//kupiles jednostke units[unit - 1];
-	
-	else if (unit == 1)licznik1++;
-	else if (unit == 2)licznik2++;
-	else if (unit == 3)licznik3++;
-	else if (unit == 4)licznik4++;
-	else if (unit == 5)licznik5++;
-	else if (unit == 6)licznik6++;
-	else if (unit == 7)licznik7++;
-	else if (unit == 8)licznik8++;
-	else if (unit == 9)licznik9++;
-	else if (unit == 10)licznik10++;
-	cout << licznik1;
+
 	cash -= units[unit - 1].cost;
 	cash_per_second += units[unit - 1].eff;
 	units[unit - 1].cost = units[unit - 1].cost * 11 / 10;
@@ -105,18 +91,18 @@ int main() {
 		clear();
 		add_cash();
 
-		cout << "Twoje œrodki: " << cash << " Yang" << endl;
-		cout << "Œrodki na sekundê: " << cash_per_second << " YPS" << endl;
+		cout << "Twoje Å“rodki: " << cash << " Yang" << endl;
+		cout << "Å’rodki na sekundÃª: " << cash_per_second << " YPS" << endl;
 		cout << endl;
-		cout << "1. Odœwie¿" << endl;
-		cout << "2. Kup jednostkê" << endl;
-		cout << "3. Wyjœcie" << endl;
+		cout << "1. OdÅ“wieÂ¿" << endl;
+		cout << "2. Kup jednostkÃª" << endl;
+		cout << "3. WyjÅ“cie" << endl;
 		cout << endl << endl;
-		cout << "Wybierz akcjê: ";
+		cout << "Wybierz akcjÃª: ";
 		string action;
 		cin >> action;
 
-		// 3. Wykonaj akcjê
+		// 3. Wykonaj akcjÃª
 		if (action.length() == 0) {
 			return 0;
 		}
