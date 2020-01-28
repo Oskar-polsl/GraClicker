@@ -66,7 +66,7 @@ void shop() {
 	cout << endl;
 	cout << "Wpisz 'q' aby wróciæ do menu g³ównego." << endl;
 	cout << "Wybierz jednostkê: ";
-	
+	int unit;
 	cin >> unit;
 
 	if (cin.fail()) {
